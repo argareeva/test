@@ -1,23 +1,23 @@
-#Гареева Альбина БПИ218 
-#ДЗ к семинару 4
+# Гареева Альбина БПИ218 
+# ДЗ к семинару 4
 
 В программе создается массив char str_buf размером buf_size - это будет нашим буфером.
 
-#char str_buf[buf_size];
-#const int buf_size = 1024;
+# char str_buf[buf_size];
+# const int buf_size = 1024;
 
 Параметр fd - указатель на массив из двух переменных (файловые дескрипторы для операции чтения и записи). Делаем проверку на возвращаемое значение. Через аргументы командной строки записываем данные в fd[0], fd[1].
 
-#int fd[2];
-#fd[0] = open(argv[1], O_RDONLY);
-#fd[1] = open(argv[2], O_WRONLY);
+# int fd[2];
+# fd[0] = open(argv[1], O_RDONLY);
+# fd[1] = open(argv[2], O_WRONLY);
 
 В переменной read_file хранится количество успешно считанных элементов.
 
-#read_file = read(fd[0], str_buf, buf_size);
+# read_file = read(fd[0], str_buf, buf_size);
 
 В переменной write_file хранится количество успешно записанных элементов.
 
-#write_file = write(fd[1], str_buf, strlen(str_buf));
+# write_file = write(fd[1], str_buf, strlen(str_buf));
 
 Закрываем поток.
